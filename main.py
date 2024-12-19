@@ -18,29 +18,24 @@
 
 
 import random
-name ="vikash"
-question = ("What is your name?")
-answer =""
-random_number = random.randint(1,9)
-match random_number:
-    case 1:
-        answer = "Yes - definitely"
-    case 2:
-        answer = "It is decidedly so"
-    case 3:
-        answer = "Without a doubt"
-    case 4:
-        answer = "Reply hazy, try again"
-    case 5:
-        answer = "Ask again later"
-    case 6:
-        answer = "Better not tell you now"
-    case 7:
-        answer = "My sources say no"
-    case 8:
-        answer = "Outlook not so good"
-    case 9:
-        answer = "Very doubtful"
-    case _:
-        answer = "Error"
-print(name,question,answer)
+name = ""
+question = ""
+answer = ""
+
+
+question_list = ["what is your name?", "what is your favorite color?", "what is your favorite animal?", "what is your favorite food?", "what is your favorite movie?"]
+
+
+answer_list = ["Yes - definitely", "It is decidedly so", "Without a doubt", "Reply hazy, try again", "Ask again later", "Better not tell you now", "My sources say no", "Outlook not so good", "Very doubtful"]
+
+question_index = random.randint(0, (len(question_list) - 1))
+answer_index = random.randint(0, (len(answer_list) - 1))
+
+question=question_list[question_index]
+answer=answer_list[answer_index]
+
+if name:
+    print(f"{name} ask: {question}")
+else:
+    print(f"question: {question}")
+print(f"answer: {answer}")
